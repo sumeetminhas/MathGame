@@ -10,9 +10,9 @@ class Game
   end
 
   def intro
-    output = "\n====================="
-    output += "\n......Welcome......"
-    output += "\n===================="
+    puts = "\n====================="
+    puts += "\n......Welcome......"
+    puts += "\n===================="
   end
 
   def inform(exclaim)
@@ -20,15 +20,15 @@ class Game
   end
 
   def warning
-    output = "\n"
-    @players.each { |player| output += "Player #{player.id} => #{player.lives_remaining}\n"}
-    output
+    puts = "\n"
+    @players.each { |player| puts += "Player #{player.id} => #{player.lives_remaining}\n"}
+    puts
   end
 
   def someone_won
     winner = other_player
-    output = "Player #{winner.id} wins. You have #{winner.lives_remaining}"
-    output += "\n=====GAME OVER ====="
+    puts = "Player #{winner.id} wins. You have #{winner.lives_remaining}"
+    puts += "\n=====GAME OVER ====="
   end
 
   def other_player
